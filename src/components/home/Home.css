@@ -1,0 +1,223 @@
+.home {
+  height: 80vh;
+  display: flex;
+  align-items: center; /* vertical centering */
+  justify-content: space-between; /* horizontal spacing */
+  margin-top: 0; /* remove top margin */
+  margin-top: 50px;
+}
+
+.left {
+  padding-left: 80px;
+  width: 50%;
+}
+.heading {
+  padding-top: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+  text-shadow: 0px 0px 30px rgba(150, 66, 229, 0.4);
+  transform: scale(0.3) translateZ(-500px);
+  animation: popIn 1.5s ease-out forwards;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateZ(-500px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05) translateZ(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+  }
+}
+
+.heading-1 {
+  background: linear-gradient(90deg, white, rgb(229, 209, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading-2 {
+  font-size: 3.75rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.typewriter {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  background: linear-gradient(90deg, white, rgb(229, 209, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 1;
+  min-height: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.cursor {
+  display: inline-block;
+  width: 5px;
+  height: 30px;
+  background: linear-gradient(to right, #7c3aed, #c084fc);
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.typewriter {
+  animation: slideUp 0.6s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.sentence {
+  padding-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: gray;
+  display: block;
+  animation: slideUp 0.6s ease-out forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+}
+
+.techstack {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  animation: slideUp 0.6s ease-out forwards;
+  animation-delay: 1.8s;
+  opacity: 0;
+}
+
+.techstack-name {
+  font-family: "Poppins", sans-serif;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  color: white;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.techstack-name:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(229, 209, 255, 0.3);
+}
+
+.button-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  animation: slideUp 0.6s ease-out forwards;
+  animation-delay: 2.4s;
+  opacity: 0;
+}
+
+.glow-btn {
+  position: relative;
+  background: #0b0215;
+  color: white;
+  padding: 0.5rem 2rem;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0px 0px 30px rgba(150, 66, 229, 0.4);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  z-index: 1;
+  backdrop-filter: blur(8px);
+  transition: color 0.3s ease;
+}
+
+.glow-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #a56cff, #9442e5);
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+.glow-btn:hover::before {
+  width: 100%;
+}
+
+.glow-btn:hover {
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  animation: slideUp 0.6s ease-out forwards;
+  animation-delay: 3s;
+  opacity: 0;
+}
+
+.icon-btn {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 1rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.3rem;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(150, 66, 229, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.icon-btn:hover {
+  background: rgba(150, 66, 229, 0.12);
+  box-shadow: 0 0 25px rgba(150, 66, 229, 0.4);
+  color: #fff;
+  border-color: rgba(150, 66, 229, 0.5);
+}
+
+a {
+  text-decoration: none;
+}
+
+.lottie-container{
+  width: 100%;
+  transform: scale(0.3) translateZ(-500px);
+  animation: popIn 1.5s ease-out forwards;
+}

@@ -1,0 +1,340 @@
+.about-section {
+  scroll-behavior: smooth;
+}
+
+.about-container {
+  text-align: center;
+  transform-origin: center;
+}
+
+/* Base animation styles */
+.about-title,
+.about-subtitle {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition: all 0.6s ease;
+}
+
+/* When visible - title animates first */
+.pop-in .about-title {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0s;
+}
+
+/* When visible - subtitle animates after title */
+.pop-in .about-subtitle {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition-delay: 0.2s;
+}
+
+/* Pop-out reverses everything */
+.pop-out .about-title,
+.pop-out .about-subtitle {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+  transition-delay: 0s;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-subtitle {
+  font-size: 1.1rem;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.glitter-icon {
+  color: #a56cff;
+}
+
+.about-info {
+  padding-left: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-info-heading {
+  max-width: 50%;
+}
+
+.my-info-heading-1 {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #60a5fa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.my-info-heading-2 {
+  font-size: 3rem;
+  font-weight: bold;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info-details {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.desc {
+  text-align: justify;
+}
+
+/* Default state */
+.slide-out .my-info-heading-1,
+.slide-out .my-info-heading-2,
+.slide-out .info-details {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+/* Animated state */
+.slide-in .my-info-heading-1 {
+  animation: slideFromLeft 0.6s ease-out forwards;
+}
+
+.slide-in .my-info-heading-2 {
+  animation: slideFromLeft 0.7s ease-out forwards;
+}
+
+.slide-in .info-details {
+  animation: slideFromLeft 0.8s ease-out forwards;
+}
+
+.button-group {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #a855f7, #6366f1);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #a855f7;
+  color: #a855f7;
+}
+
+.btn-outline:hover {
+  background: rgba(168, 85, 247, 0.1);
+  transform: translateY(-2px);
+}
+
+.slide-out .slide-target {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+/* Visible state: animate from left */
+.slide-in .slide-target {
+  animation: slideFromLeft 0.9s ease-out forwards;
+}
+
+@keyframes leftRightBounce {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-6px);
+  }
+}
+
+.attention {
+  animation: leftRightBounce 1.2s ease-in-out infinite;
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: 1rem;
+  padding: 1rem 5rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(22, 20, 51, 0.3);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(128, 128, 128, 0.127);
+  display: flex;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.stat-icon {
+  background: rgba(255, 255, 255, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.stat-info h3 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.stat-info p {
+  font-size: 0.9rem;
+  color: gray;
+  margin-top: 0.3rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+/* Cards hidden by default */
+.slide-out .stat-card {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+
+/* Animate all cards in from left */
+.slide-in .stat-card {
+  animation: allCardsFromLeft 2s ease-out forwards;
+  opacity: 1;
+}
+
+/* Slide-in from left keyframes */
+@keyframes allCardsFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  60% {
+    transform: translateX(10px);
+  }
+  80% {
+    transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Initial hidden state */
+.stat-card .stat-info {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* When cards are visible and sliding in */
+.slide-in .stat-card .stat-info {
+  animation: infoFromBottom 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Keyframes for upward motion */
+@keyframes infoFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.profile-image {
+  margin-right: 12rem;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 25px rgba(93, 82, 237, 0.7);
+  background: radial-gradient(circle, #0f0f23 40%, transparent 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem; /* adjust as needed */
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Image hidden initially - off screen to the right */
+.slide-out-image {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.6s ease-out;
+  }
+  
+  /* Slide in from right */
+  .slide-in-image {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.6s ease-out;
+  }
+  

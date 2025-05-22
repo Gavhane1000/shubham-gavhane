@@ -7,12 +7,13 @@ import { scroller } from "react-scroll";
 
 const Home = () => {
   const sentences = [
-    "Crafting beautiful UI with precision.",
-    "Responsive designs, pixel-perfect results.",
-    "Turning ideas into interactive experiences.",
-    "Bringing life to code with animations.",
+    "Automating systems. Scaling ideas.",
+    "Making the web smarter - one line of code at a time.",
+    "Building apps with AI-first thinking.",
+    "Engineering smarter solutions using LLMs.",
+    "Code. Deploy. Repeat."
   ];
-  const techStack = ["Spring Boot","Vue.js", "Flask", "React"];
+  const techStack = ["Spring Boot","Vue.js", "Flask", "React", "Python", "Java", "LLMs", "genAI", "PostgreSQL"];
 
   const [currentSentenceIndex, setCurrentSentenceIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
@@ -64,7 +65,7 @@ const Home = () => {
         <div className="heading">
           <span className="heading-1">Full-Stack</span>
           <br />
-          <span className="heading-2">Developer</span>
+          <span className="heading-1">Developer</span>
         </div>
         <br />
         <h2 className="typewriter">
@@ -72,7 +73,9 @@ const Home = () => {
           <span className="cursor">|</span>
         </h2>
         <span className="sentence">
-          Innovative solutions. Functional designs. Seamless user experiences.
+          Crafting intelligent, scalable, and elegant solutions for real-world problems. 
+          Merging AI, code, and clean design to build what’s next. 
+          Where backend power meets frontend magic.
         </span>
         <div className="techstack">
           {techStack.map((tech, index) => (

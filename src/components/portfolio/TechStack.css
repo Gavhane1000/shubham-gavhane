@@ -1,49 +1,51 @@
 .techstack-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 0px;
-  }
-  
-  .techstack-card {
-    background: rgba(36, 37, 60, 0.5);
-    border: 1px solid rgba(128, 128, 128, 0.115);
-    border-radius: 10px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 130px;
-    max-height: 150px;
-    margin: 5px;
-    color: white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .techstack-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
-  }
-  
-  .techstack-image-wrapper {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .techstack-img {
-    height: 90px;
-    padding: 20px;
-  }
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 4 columns */
+  gap: 30px;
+  padding: 0px;
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 1080px; /* Optional: restrict width for better centering */
+  justify-items: center; /* Center items inside each grid cell */
+}
 
-  .techstack-img:hover {
-    box-shadow: 0px 0px 30px rgba(150, 66, 229, 0.4);
-  }
-  .name{
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-bottom: 10px;
-    font-size: 15px;
-  }
+.techstack-card {
+  background: rgba(36, 37, 60, 0.5);
+  border: 1px solid rgba(128, 128, 128, 0.115);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 130px;
+  max-height: 150px;
+  margin: 5px;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.techstack-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.techstack-image-wrapper {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+.techstack-img {
+  height: 100px;
+  padding: 20px;
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.techstack-img:hover {
+  transform: scale(1.1); /* Zoom effect */
+}
+.name {
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  font-size: 15px;
+}

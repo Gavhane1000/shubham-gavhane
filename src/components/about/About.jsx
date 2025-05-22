@@ -34,14 +34,52 @@ const AboutMe = () => {
   }, []);
 
   const handleProjectClick = () => {
-    console.log("Hahaha");
-
     scroller.scrollTo("portfolio", {
       smooth: true,
       offset: -40, // Adjust this as needed for your navbar height
       duration: 800,
     });
   };
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const workHistory = [
+    {
+      company: 'Google',
+      role: 'Frontend Developer',
+      date: 'June 2020 - Present',
+      description: 'Worked on improving UI performance and accessibility for major products.',
+    },
+    {
+      company: 'Amazon',
+      role: 'Software Engineer',
+      date: 'Jan 2018 - May 2020',
+      description: 'Led frontend migration to React, improving developer efficiency.',
+    },
+    {
+      company: 'StartupX',
+      role: 'Web Developer',
+      date: 'July 2016 - Dec 2017',
+      description: 'Built and launched MVPs for multiple startup clients.',
+    },
+    {
+      company: 'StartupX',
+      role: 'Web Developer',
+      date: 'July 2016 - Dec 2017',
+      description: 'Built and launched MVPs for multiple startup clients.',
+    },
+    {
+      company: 'StartupX',
+      role: 'Web Developer',
+      date: 'July 2016 - Dec 2017',
+      description: 'Built and launched MVPs for multiple startup clients.',
+    },
+    {
+      company: 'StartupX',
+      role: 'Web Developer',
+      date: 'July 2016 - Dec 2017',
+      description: 'Built and launched MVPs for multiple startup clients.',
+    },
+  ];
 
   return (
     <section>
@@ -55,7 +93,7 @@ const AboutMe = () => {
         <h1 className="about-title">About Me</h1>
         <p className="about-subtitle">
           <GiSparkles className="glitter-icon" />
-          Transforming ideas into digital experiences
+          Technology is magic, and the magician behind it is the engineer.
           <GiSparkles className="glitter-icon" />
         </p>
       </div>
@@ -67,14 +105,12 @@ const AboutMe = () => {
       >
         <div className="my-info-heading">
           <p className="my-info-heading-1">Hello I'm</p>
-          <p className="my-info-heading-2">Shubham Gavhane</p>
+          <p className="my-info-heading-1">Shubham Gavhane</p>
           <div className="info-details">
             <p className="desc">
-              Software Developer with a background in Computer Engineering. I
-              specialize in Front-End development and enjoy building clean,
-              intuitive digital experiences. I'm passionate about turning ideas
-              into scalable solutions and constantly strive for excellence in
-              every project.
+              I see engineering as modern-day magic—code that brings ideas to life and solves problems before they grow.
+              Over the past few years, I’ve led projects where automation, intelligent design, and AI integration weren’t just add-ons—they were at the core. I aim to build tech that thinks, learns, and adapts.
+              I’m not just here to build what’s asked—I’m here to build what’s possible.
             </p>
           </div>
           <div className="button-group slide-target">
@@ -108,7 +144,7 @@ const AboutMe = () => {
       <div
         className={`stats-section ${isInfoVisible ? "slide-in" : "slide-out"}`}
       >
-        <div className="stat-card">
+        <div className="stat-card" onClick={handleProjectClick}>
           <div className="stat-icon">
             <FaCode />
           </div>
@@ -119,7 +155,7 @@ const AboutMe = () => {
           <div className="stat-value">3</div>
         </div>
 
-        <div className="stat-card">
+        <div className="stat-card" onClick={handleProjectClick}>
           <div className="stat-icon">
             <PiCertificateFill />
           </div>
@@ -130,7 +166,7 @@ const AboutMe = () => {
           <div className="stat-value">5</div>
         </div>
 
-        <div className="stat-card">
+        <div className="stat-card" onClick={handleProjectClick}>
           <div className="stat-icon">
             <FaGlobe />
           </div>
@@ -141,6 +177,7 @@ const AboutMe = () => {
           <div className="stat-value">3</div>
         </div>
       </div>
+      
     </section>
   );
 };

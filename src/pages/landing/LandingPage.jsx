@@ -1,21 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { FaCode, FaUser, FaGithub } from "react-icons/fa";
 import "./LandingPage.css";
 
 function LandingPage() {
-  const navigate = useNavigate();
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     const fadeTimer = setTimeout(() => setFadeOut(true), 3000);
-    const navigateTimer = setTimeout(() => navigate("/home"), 4500);
-
-    return () => {
-      clearTimeout(fadeTimer);
-      clearTimeout(navigateTimer);
-    };
-  }, [navigate]);
+    return () => clearTimeout(fadeTimer);
+  }, []);
 
   return (
     <div className={`landing ${fadeOut ? "fade-out" : ""}`}>

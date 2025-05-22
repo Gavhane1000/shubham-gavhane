@@ -6,6 +6,7 @@ import Project from "./Project";
 import Img1 from "../../assets/project/1.jpg";
 import Certificate from "./Certificate";
 import TechStack from "./TechStack";
+import Experience from "./Experience";
 
 const Portfolio = () => {
   const titleRef = useRef();
@@ -75,6 +76,8 @@ const Portfolio = () => {
         return <div className="tab-content"><Certificate /></div>;
       case "techstack":
         return <div className="tab-content"><TechStack /></div>;
+      case "experience":
+        return <div className="tab-content"><Experience /></div>;
       default:
         return null;
     }
@@ -113,6 +116,14 @@ const Portfolio = () => {
           >
             <FaCertificate className="tab-icon" />
             <span>Certificates</span>
+            <div className="click-fill"></div>
+          </div>
+          <div
+            className={`tab ${activeTab === "experience" ? "active" : ""}`}
+            onClick={() => setActiveTab("experience")}
+          >
+            <PiStackSimpleFill className="tab-icon" />
+            <span>Experience</span>
             <div className="click-fill"></div>
           </div>
           <div

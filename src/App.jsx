@@ -6,7 +6,7 @@ import HomePage from "./pages/home/HomePage";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/shubham-gavhane">
       <Routes>
         <Route path="/" element={<MainPage />} />
         {/* You can add other routes here if needed */}

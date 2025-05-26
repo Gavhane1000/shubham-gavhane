@@ -1,0 +1,93 @@
+.experience {
+  padding: 0rem;
+  color: #fff;
+}
+
+.experience-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.experience-card {
+ position: relative;
+  background-color: #1c1c3c;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 460px; /* Increased from 300px */
+  height: 170px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.duration {
+  color: #6e6bff;
+  font-size: 1rem;
+  margin-bottom: 0rem;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+
+.heading-com{
+ display: flex;
+ justify-content: space-between;
+}
+
+.company{
+ margin-top: 5px;
+ font-size: 2rem;
+ font-weight: 600;
+ color: #a855f7;
+}
+
+.role{
+ font-size: 1.4rem;
+ font-weight: 500;
+ display: flex;
+ align-items: start;
+ color: #a0a0ff;
+ line-height: 10px;
+}
+
+.description {
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: #a0a0ff;
+  margin-top: 10px;
+
+  text-align: left;        /* Ensures left alignment */
+  display: block;          /* Makes sure it takes a full line */
+  width: 100%;             /* Spans the full card */
+  line-height: 1.5rem;     /* Optional: improves readability */
+  white-space: normal;     /* Prevents text from being forced inline or truncated */
+}
+
+.marks{
+ color: #a0a0ff;
+  font-size: 1rem;
+  margin-bottom: 0rem;
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+
+.current {
+  border: 2px solid #a855f7; /* or any color to highlight */
+}
+
+.top-right-tick {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: #a855f7;
+  font-size: 0.7rem;
+  background: #0b0b22;
+  border-radius: 50%;
+  padding: 2px 6px;
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Portfolio.css";
-import { FaLaptopCode, FaCertificate } from "react-icons/fa";
+import { FaLaptopCode, FaCertificate, FaBriefcase } from "react-icons/fa";
 import { PiStackSimpleFill } from "react-icons/pi";
 import Project from "./Project";
 import Img1 from "../../assets/project/1.jpg";
@@ -93,10 +93,9 @@ const Portfolio = () => {
       >
         <h1 className="about-title">Portfolio Showcase</h1>
         <p className="about-subtitle">
-          Explore my journey through projects, certifications, and technical
-          expertise.
-          <br />
-          Each section represents a milestone in my continuous learning path.
+          A curated timeline of my projects, certifications, experience, and tech stack—
+          <br/>
+          showcasing continuous growth and hands-on expertise.
         </p>
       </div>
 
@@ -122,7 +121,7 @@ const Portfolio = () => {
             className={`tab ${activeTab === "experience" ? "active" : ""}`}
             onClick={() => setActiveTab("experience")}
           >
-            <PiStackSimpleFill className="tab-icon" />
+            <FaBriefcase className="tab-icon" />
             <span>Experience</span>
             <div className="click-fill"></div>
           </div>

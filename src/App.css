@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;}
+  font-family: "Poppins", sans-serif;
+}
 
 body {
   margin: 0;
@@ -26,13 +27,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:linear-gradient(to upward, #7c3aed, #c084fc);;
+  background: linear-gradient(to top, #7c3aed, #c084fc); /* Fixed */
   border-radius: 10px;
   border: 2px solid #1e1e2f;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #b87eff;
+  background: #b87eff;
 }
-
 /*  */

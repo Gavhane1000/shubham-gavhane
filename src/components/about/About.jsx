@@ -41,45 +41,6 @@ const AboutMe = () => {
     });
   };
 
-  const [activeIndex, setActiveIndex] = useState(0);
-  const workHistory = [
-    {
-      company: 'Google',
-      role: 'Frontend Developer',
-      date: 'June 2020 - Present',
-      description: 'Worked on improving UI performance and accessibility for major products.',
-    },
-    {
-      company: 'Amazon',
-      role: 'Software Engineer',
-      date: 'Jan 2018 - May 2020',
-      description: 'Led frontend migration to React, improving developer efficiency.',
-    },
-    {
-      company: 'StartupX',
-      role: 'Web Developer',
-      date: 'July 2016 - Dec 2017',
-      description: 'Built and launched MVPs for multiple startup clients.',
-    },
-    {
-      company: 'StartupX',
-      role: 'Web Developer',
-      date: 'July 2016 - Dec 2017',
-      description: 'Built and launched MVPs for multiple startup clients.',
-    },
-    {
-      company: 'StartupX',
-      role: 'Web Developer',
-      date: 'July 2016 - Dec 2017',
-      description: 'Built and launched MVPs for multiple startup clients.',
-    },
-    {
-      company: 'StartupX',
-      role: 'Web Developer',
-      date: 'July 2016 - Dec 2017',
-      description: 'Built and launched MVPs for multiple startup clients.',
-    },
-  ];
 
   return (
     <section>
